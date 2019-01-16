@@ -18,12 +18,17 @@
             </feature>
         </config-file>
 
-        <config-file parent="/*" target="AndroidManifest.xml"/>
+        <config-file target="AndroidManifest.xml" parent="/*">
+            <uses-permission android:name="android.permission.INTERNET" />
+        </config-file>
+
         <source-file src="src/android/ImoxPlugin.java" target-dir="src/cordova/plugin/imox/ImoxPlugin"/>
 
         <framework src="io.imox.features:recolecdata:1.0.3"/>
         <framework src="src/android/build.gradle" custom="true" type="gradleReference" />
+
     </platform>
+
     <platform name="ios">
         <config-file parent="/*" target="config.xml">
             <feature name="ImoxPlugin">
