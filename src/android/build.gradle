@@ -1,3 +1,6 @@
+dependencies {
+  api 'io.imox.features:recolecdata:1.0.4'
+}
 repositories {
     maven {
         url 'https://api.bitbucket.org/1.0/repositories/epictechdevteam/public-release/raw/master'
