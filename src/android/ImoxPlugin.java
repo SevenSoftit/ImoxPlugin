@@ -1,4 +1,4 @@
-package cordova-plugin-imox;
+package cordova.plugin.imox;
 
 import org.apache.cordova.CordovaPlugin;
 import org.apache.cordova.CallbackContext;
