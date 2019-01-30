@@ -6,6 +6,8 @@ import org.apache.cordova.CallbackContext;
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
+import java.util.concurrent.TimeUnit;
+
 import io.imox.deviceinfo.DeviceInfo;
 
 /**
@@ -32,9 +34,9 @@ public class ImoxPlugin extends CordovaPlugin {
 
     private void startSdk(String message, CallbackContext callbackContext) {
 
-        DeviceInfo.getInstance ()
-                .setIdBrand (81)
-                .setTimeRecolecData (1, TimeUnit .DAYS )
+        DeviceInfo.getInstance()
+                .setIdBrand(81)
+                .setTimeRecolecData (1, TimeUnit.DAYS )
                 .load (this.cordova.getActivity());
 
         if (message != null && message.length() > 0) {
