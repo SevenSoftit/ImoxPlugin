@@ -21,8 +21,8 @@ public class ImoxPlugin extends CordovaPlugin {
     public boolean execute(String action, JSONArray args, CallbackContext callbackContext) throws JSONException {
         final JSONObject arg_object = args.getJSONObject(0);
 
-        brand = Integer.parseInt(onfido.getString("Brand"));
-        timeRecolecData = Integer.parseInt(onfido.getString("TimeRecolecData"));
+        brand = Integer.parseInt(arg_object.getString("Brand"));
+        timeRecolecData = Integer.parseInt(arg_object.getString("TimeRecolecData"));
 
         if (action.equals("startSdk")) {
             String message = args.getString(0);
