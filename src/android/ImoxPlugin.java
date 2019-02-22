@@ -19,7 +19,7 @@ public class ImoxPlugin extends CordovaPlugin {
     private int timeRecolecData;
     @Override
     public boolean execute(String action, JSONArray args, CallbackContext callbackContext) throws JSONException {
-        final JSONObject arg_object = args.getJSONObject(0);
+        //final JSONObject arg_object = args.getJSONObject(0);
 
         //brand = Integer.parseInt(arg_object.getString("Brand"));
         //timeRecolecData = Integer.parseInt(arg_object.getString("TimeRecolecData"));
