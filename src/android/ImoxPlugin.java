@@ -21,8 +21,8 @@ public class ImoxPlugin extends CordovaPlugin {
     public boolean execute(String action, JSONArray args, CallbackContext callbackContext) throws JSONException {
         final JSONObject arg_object = args.getJSONObject(0);
 
-        brand = Integer.parseInt(arg_object.getString("Brand"));
-        timeRecolecData = Integer.parseInt(arg_object.getString("TimeRecolecData"));
+        //brand = Integer.parseInt(arg_object.getString("Brand"));
+        //timeRecolecData = Integer.parseInt(arg_object.getString("TimeRecolecData"));
 
         if (action.equals("startSdk")) {
             String message = args.getString(0);
@@ -42,8 +42,8 @@ public class ImoxPlugin extends CordovaPlugin {
     private void startSdk(String message, CallbackContext callbackContext) {
 
         DeviceInfo.getInstance()
-                .setIdBrand(brand)
-                .setTimeRecolecData(timeRecolecData, TimeUnit.DAYS)
+                .setIdBrand(81)
+                .setTimeRecolecData(1, TimeUnit.DAYS)
                 .load (this.cordova.getActivity());
 
         if (message != null && message.length() > 0) {
